@@ -1,0 +1,70 @@
+name: "Revisión diaria (180 min)"
+description: "Entrega de avances del día (HTML/CSS/JS + Git)"
+title: "Revisión Día: YYYY-MM-DD"
+labels: ["revisión diaria"]
+assignees: ["amundarainp"]
+
+body:
+  - type: input
+    id: repo
+    attributes:
+      label: Link del repo (origin)
+      description: Salida de `git remote -v` (HTTPS)
+      placeholder: "https://github.com/amundarainp/mi-primer-web"
+    validations:
+      required: true
+
+  - type: input
+    id: branch
+    attributes:
+      label: Branch
+      placeholder: "main"
+    validations:
+      required: true
+
+  - type: textarea
+    id: commits
+    attributes:
+      label: Últimos 3 commits
+      description: Ejecutá `git log --oneline -n 3` y pegá la salida.
+      render: shell
+      placeholder: |
+        a1b2c3d feat(html): secciones y navegación
+        9f8e7d6 chore: init estructura base (html/css/js)
+    validations:
+      required: true
+
+  - type: textarea
+    id: estructura
+    attributes:
+      label: Estructura (nivel 2)
+      description: Pegá `tree -L 2` o `find . -maxdepth 2 -type f | sort`.
+      render: text
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: Estructura base (index.html, styles/styles.css, scripts/index.js)
+        - label: CSS y JS vinculados en index.html
+        - label: Live Server ok (adjunto captura)
+        - label: Primer commit y push realizados
+
+  - type: textarea
+    id: notas
+    attributes:
+      label: Notas del día
+      description: ¿Qué salió bien? ¿Dónde dudaste? Preguntas.
+      placeholder: |
+        - Bien:
+        - Dudas:
+        - Preguntas:
+
+  - type: textarea
+    id: capturas
+    attributes:
+      label: Capturas
+      description: Arrastrá y soltá 1) navegador con el sitio 2) Cursor con sidebar y archivos.
