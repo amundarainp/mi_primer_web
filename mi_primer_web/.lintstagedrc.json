@@ -1,5 +1,0 @@
-{
-  "$schema": "https://json.schemastore.org/lintstaged.json",
-  "*.{js,jsx,ts,tsx}": ["eslint --fix"],
-  "*.{json,md,html,css,scss}": ["prettier --write"]
-}
