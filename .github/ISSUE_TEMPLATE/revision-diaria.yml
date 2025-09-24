@@ -1,8 +1,8 @@
-name: "Revisión diaria (180 min)"
-description: "Entrega de avances del día (HTML/CSS/JS + Git)"
-title: "Revisión Día: YYYY-MM-DD"
-labels: ["revisión diaria"]
-assignees: ["amundarainp"]
+name: 'Revisión diaria (180 min)'
+description: 'Entrega de avances del día (HTML/CSS/JS + Git)'
+title: 'Revisión Día: YYYY-MM-DD'
+labels: ['revisión diaria']
+assignees: ['amundarainp']
 
 body:
   - type: input
@@ -10,7 +10,7 @@ body:
     attributes:
       label: Link del repo (origin)
       description: Salida de `git remote -v` (HTTPS)
-      placeholder: "https://github.com/amundarainp/mi-primer-web"
+      placeholder: 'https://github.com/amundarainp/mi-primer-web'
     validations:
       required: true
 
@@ -18,7 +18,7 @@ body:
     id: branch
     attributes:
       label: Branch
-      placeholder: "main"
+      placeholder: 'main'
     validations:
       required: true
 

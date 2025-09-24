@@ -1,0 +1,88 @@
+/* reset.css — moderno y accesible */
+
+/* Box sizing consistente */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Sacar márgenes por defecto */
+* {
+  margin: 0;
+}
+
+/* Tipografía y suavizado base */
+:root {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Medios: que no desborden el contenedor */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inputs y botones heredan la fuente del documento */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Mejor corte de palabras en títulos y párrafos largos */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Listas sin estilo solo si se marca como lista de rol (no afecta listas normales) */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Enlaces: subrayado más prolijo cuando se use */
+a {
+  text-decoration-skip-ink: auto;
+}
+
+/* Focus visible accesible (ajustá en tu styles.css si querés otro color) */
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Preferencia del usuario: reducir animaciones/transiciones */
+@media (prefers-reduced-motion: reduce) {
+  *:not([data-allow-motion]) {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
